@@ -516,7 +516,7 @@ namespace LogicaNegocio
             List<string> abdhastaN = new List<string>();
             List<string> zhastaN = new List<string>();
             List<string> unionabczhastaN = new List<string>();
-            string[] abhastaN = new string[] {cadenas.a+cadenas.b};
+            string[] abhastaN = new string[] { cadenas.a + cadenas.b };
             List<string> cadenaRegular = new List<string>();
             List<string> cadenaRegular2 = new List<string>();
             List<string> cadenaRegular3 = new List<string>();
@@ -553,7 +553,7 @@ namespace LogicaNegocio
                             cadenaRegular2.Add(cadenaRegular[x].ToString() + zhastaN[y].ToString());
                         }
                     }
-                    string[] abc_sigma = new string[] { "abcλ"};
+                    string[] abc_sigma = new string[] { "abcλ" };
                     resultado1 = abc_sigma.Union(cadenaRegular2.ToArray()).ToArray();
 
                     foreach (var item in resultado1)
@@ -565,8 +565,8 @@ namespace LogicaNegocio
                     //((λ|1)e)*
                     //=(λ|1)=λU1={λ,1}
                     //(λ|1)e={λ,1}{e}={1e}
-                    string[] solouno = new string[] {"1"};
-                    string[] econcatenacion = new string[] {cadenas.e };
+                    string[] solouno = new string[] { "1" };
+                    string[] econcatenacion = new string[] { cadenas.e };
                     string[] econcatenacion2sigma = new string[] { "λ" };
 
                     List<string> unionList = new List<string>();
@@ -574,8 +574,8 @@ namespace LogicaNegocio
                     {
                         for (int x = 0; x < econcatenacion.Length; x++)
                         {
-                           cadenaRegular.Add(solouno[y] + econcatenacion[x]);
-                          // stringBuilder.Append(solouno[y] + econcatenacion[x]);
+                            cadenaRegular.Add(solouno[y] + econcatenacion[x]);
+                            // stringBuilder.Append(solouno[y] + econcatenacion[x]);
                         }
                     }
                     for (int x = 0; x < econcatenacion2sigma.Length; x++)
@@ -584,10 +584,10 @@ namespace LogicaNegocio
                         {
                             //stringBuilder.AppendLine();
                             cadenaRegular2.Add(econcatenacion2sigma[x] + econcatenacion[y]);
-                           // stringBuilder.Append(solouno[x] + econcatenacion2sigma[y]);
+                            // stringBuilder.Append(solouno[x] + econcatenacion2sigma[y]);
                         }
                     }
-                    
+
                     resultado1 = cadenaRegular.Union(cadenaRegular2.ToArray()).ToArray();
                     for (int x = 0; x < resultado1.Length; x++)
                     {
@@ -636,28 +636,28 @@ namespace LogicaNegocio
                     //pendiente de revisar bien
                     //(1|2)*z((e|u)(m|c))+
                     //(12z)(12z)=112
-                    string[] concatenacion= new string[] { "1","2" };
+                    string[] concatenacion = new string[] { "1", "2" };
                     string[] uno = new string[] { "1" };
                     string[] dos = new string[] { "2" };
                     string[] sigma1 = new string[] { "λ" };
-                   // string[] sigma = new string[] { "λ" };
-                    string[] e = new string[] { cadenas.e};
+                    // string[] sigma = new string[] { "λ" };
+                    string[] e = new string[] { cadenas.e };
                     string[] u = new string[] { cadenas.u };
                     string[] m = new string[] { cadenas.m };
                     string[] c = new string[] { cadenas.c };
                     string[] z = new string[] { cadenas.z };
-                    List<string> resultado3=new List<string>();
+                    List<string> resultado3 = new List<string>();
                     List<string> resultado4 = new List<string>();
                     string[] resultado2;
-                    resultado1 = new string[] { cadenas.e,cadenas.u }; //e.Union(u.ToArray()).ToArray();
-                    resultado2 = new string[] { cadenas.c,cadenas.m }; //m.Union(c.ToArray()).ToArray();
+                    resultado1 = new string[] { cadenas.e, cadenas.u }; //e.Union(u.ToArray()).ToArray();
+                    resultado2 = new string[] { cadenas.c, cadenas.m }; //m.Union(c.ToArray()).ToArray();
                     concatenacion = uno.Union(dos).ToArray();
 
                     for (int x = 0; x < concatenacion.Length; x++)
                     {
                         for (int y = 0; y < concatenacion.Length; y++)
                         {
-                           // stringBuilder.Append(concatenacion[x] + concatenacion[y]);
+                            // stringBuilder.Append(concatenacion[x] + concatenacion[y]);
                             resultado3.Add(concatenacion[x] + concatenacion[y]);
                         }
                     }
@@ -669,14 +669,14 @@ namespace LogicaNegocio
                         }
                     }
                     //vdfgd
-                    string[] unodosz = new string[] { "λz", "12z"};
-                    
+                    string[] unodosz = new string[] { "λz", "12z" };
+
                     for (int x = 0; x < resultado1.Length; x++)
                     {
                         for (int y = 0; y < resultado2.Length; y++)
                         {
-                           
-                            cadenaRegular.Add(resultado1[x]+resultado2[y]);
+
+                            cadenaRegular.Add(resultado1[x] + resultado2[y]);
                         }
                     }
                     //string[] resultado;
@@ -714,15 +714,15 @@ namespace LogicaNegocio
                     string[] zresultado;
                     string[] b = new string[] { "b" };
 
-                    for (int i = 1; i<=3; i++)
+                    for (int i = 1; i <= 3; i++)
                     {
-                        cadenaRegular.Add(string.Concat(Enumerable.Repeat(cadenas.a,i)));
+                        cadenaRegular.Add(string.Concat(Enumerable.Repeat(cadenas.a, i)));
                     }
-                    for (int i = 1; i <=3; i++)
+                    for (int i = 1; i <= 3; i++)
                     {
                         cadenaRegular2.Add(string.Concat(Enumerable.Repeat(cadenas.c, i)));
                     }
-                    for (int i = 1; i <=3; i++)
+                    for (int i = 1; i <= 3; i++)
                     {
                         cadenaRegular3.Add(string.Concat(Enumerable.Repeat(cadenas.z, i)));
                     }
@@ -772,11 +772,11 @@ namespace LogicaNegocio
 
                      */
 
-                    for (int i = 0; i <=2 ; i++)
+                    for (int i = 0; i <= 2; i++)
                     {
-                     cadenaRegular.Add(string.Concat(Enumerable.Repeat("@",i)));
+                        cadenaRegular.Add(string.Concat(Enumerable.Repeat("@", i)));
                     }
-                    for (int i = 0; i <=2; i++)
+                    for (int i = 0; i <= 2; i++)
                     {
                         cadenaRegular2.Add(string.Concat(Enumerable.Repeat("$%", i)));
                     }
@@ -784,7 +784,7 @@ namespace LogicaNegocio
                     {
                         cadenaRegular3.Add(string.Concat(Enumerable.Repeat("&", i)));
                     }
-                    for (int i = 0; i <cadenaRegular.ToArray().Length ; i++)
+                    for (int i = 0; i < cadenaRegular.ToArray().Length; i++)
                     {
                         for (int x = 0; x < cadenaRegular2.ToArray().Length; x++)
                         {
@@ -823,7 +823,7 @@ namespace LogicaNegocio
                     }
                     foreach (var item in cadenaRegular7)
                     {
-                        stringBuilder.Append(item+",");
+                        stringBuilder.Append(item + ",");
                     }
                     break;
             }
@@ -838,6 +838,7 @@ namespace LogicaNegocio
             listaOperaciones.Add("Ejercicio Presentacion 3 Parte2");
             listaOperaciones.Add("Ejercicio Presentacion 4");
             listaOperaciones.Add("Ejercicio Presentacion 5");
+            listaOperaciones.Add("Ejercicio Presentacion 7");
 
             return listaOperaciones;
         }
@@ -894,6 +895,13 @@ namespace LogicaNegocio
                     listaOperaciones.Add("(a + bc+z*) +");
                     listaOperaciones.Add("((@ + $%+&+ ) + (#+@)) *");
                     break;
+                case 6:
+                    listaOperaciones.Add("a+b*");
+                    listaOperaciones.Add("ab(cd)+e");
+                    listaOperaciones.Add("(a+b+)cd");
+                    listaOperaciones.Add("abz?b+");
+                    listaOperaciones.Add("(cg)*gato+|cd");
+                    break;
             }
             return listaOperaciones;
         }
@@ -918,6 +926,275 @@ namespace LogicaNegocio
                 cadena = cadena.Remove(cadena.Length - prefijo.Length, prefijo.Length);
             }
             return cadena;
+        }
+        public string GenerarAutomataFinito(int index, string cadena)
+        {
+            List<Estados> ListaEstados = new List<Estados>();
+            Estados estados = new Estados();
+            //estados.Add(estados);// = "q0";
+            estados.q0 = "q0";
+            estados.q1 = "q1";
+            estados.q2 = "q2";
+            estados.q3 = "q3";
+            estados.q4 = "q4";
+            estados.q5 = "q5";
+            estados.q6 = "q6";
+            ListaEstados.Add(estados);
+            StringBuilder stringBuilder = new StringBuilder();
+            StringBuilder stringBuilderentrada = new StringBuilder();
+            stringBuilderentrada.Append(cadena);
+            char delimitador = ',';
+            string estado = "q0";
+            string[] valores = cadena.Split(delimitador);
+            switch (index)
+            {
+                case 0:
+                    foreach (var item in valores)
+                    {
+                        var test = item;
+                        if (item != "$")
+                        {
+                            foreach (char palabra in item)
+                            {
+                                switch (estado)
+                                {
+                                    case "q0":
+                                        if (palabra == 'a')
+                                            estado = estados.q1;
+                                        stringBuilder.Append("q0" + estado + "" + palabra);
+                                        break;
+                                    case "q1":
+                                        if (palabra == 'a')
+                                        {
+                                            estado = estados.q1;
+                                            stringBuilder.Append("estado: " + estado);
+                                        }
+                                        else if (palabra == 'b')
+                                        {
+                                            estado = estados.q2;
+                                            stringBuilder.Append("estado: " + estado);
+                                        }
+                                        break;
+                                    case "q2":
+                                        if (palabra == 'b')
+                                        {
+                                            estado = estados.q2;
+
+                                            stringBuilder.Append("estado: " + estado);
+                                        }
+                                        break;
+                                }
+                            }
+                        }
+                    }
+                    if (estado == "q2")
+                    {
+                        stringBuilder.AppendLine();
+                        stringBuilder.Append("La cadena es valida");
+                    }
+                    else
+                    {
+                        //stringBuilder.AppendLine();
+                        stringBuilder.Append("La cadena es invalida");
+                    }
+                    break;
+                case 1:
+                    foreach (var item in valores)
+                    {
+                        if (item != "$")
+                        {
+                            foreach (var palabra in item)
+                            {
+                                switch (estado)
+                                {
+                                    case "q0":
+                                        if (palabra == 'a')
+                                            estado = estados.q1;
+                                        break;
+                                    case "q1":
+                                        if (palabra == 'b')
+                                            estado = estados.q2;
+                                        break;
+                                    case "q2":
+                                        if (palabra == 'c')
+                                            estado = estados.q3;
+                                        break;
+                                    case "q3":
+                                        if (palabra == 'd')
+                                            estado = estados.q4;
+                                        break;
+                                    case "q4":
+                                        if (palabra == 'e')
+                                            estado = estados.q5;
+                                        else
+                                            if (palabra == 'a')
+                                            estado = estados.q4;
+                                        else
+                                                 if (palabra == 'b')
+                                            estado = estados.q2;
+                                        break;
+                                }
+                            }
+                        }
+                    }
+                    if (estado == "q5")
+                    {
+                        stringBuilder.AppendLine();
+                        stringBuilder.Append("La cadena es valida");
+                    }
+                    else
+                    {
+                        //stringBuilder.AppendLine();
+                        stringBuilder.Append("La cadena es invalida");
+                    }
+                    break;
+                case 2:
+                    foreach (var item in valores)
+                    {
+                        if (item != "$")
+                        {
+                            foreach (char palabra in item)
+                            {
+                                switch (estado)
+                                {
+                                    case "q0":
+                                        if (palabra == 'a')
+                                        {
+                                            estado = estados.q1;
+                                        }
+                                        break;
+                                    case "q1":
+                                        if (palabra == 'a')
+                                        {
+                                            estado = estados.q1;
+                                        }
+                                        else if (palabra == 'b')
+                                        {
+                                            estado = estados.q2;
+                                        }
+                                        break;
+                                    case "q2":
+                                        if (palabra == 'b')
+                                        {
+                                            estado = estados.q2;
+                                        }
+                                        else if (palabra == 'c')
+                                        {
+                                            estado = estados.q3;
+                                        }
+                                        break;
+                                    case "q3":
+                                        if (palabra == 'd')
+                                        {
+                                            estado = estados.q4;
+                                        }
+                                        break;
+                                }
+                            }
+                        }
+                    }
+                    if (estado == "q4")
+                    {
+                        stringBuilder.Append("Cadena valida");
+                    }
+                    else
+                    {
+                        stringBuilder.Append("Cadena invalida");
+                    }
+                    break;
+                case 3:
+                    foreach (var item in valores)
+                    {
+                        if (item != "$")
+                        {
+                            foreach (char palabra in item)
+                            {
+                                switch (estado)
+                                {
+                                    case "q0":
+                                        if (palabra == 'a')
+                                        {
+                                            estado = estados.q1;
+                                        }
+                                        break;
+                                    case "q1":
+                                        if (palabra == 'b')
+                                        {
+                                            estado = estados.q2;
+                                        }
+                                        break;
+                                    case "q2":
+                                        if (palabra == 'z')
+                                        {
+                                            estado = estados.q3;
+                                        }
+                                        break;
+                                    case "q3":
+                                        if (palabra == 'b')
+                                        {
+                                            estado = estados.q4;
+                                        }
+                                        break;
+                                    case "q4":
+                                        if (palabra == 'a')
+                                        {
+                                            estado = estados.q1;
+                                        }
+                                        break;
+                                }
+                            }
+                        }
+                    }
+                    if (estado == "q4")
+                    {
+                        stringBuilder.Append("Cadena correcta");
+                    }
+                    else
+                    {
+                        stringBuilder.Append("Cadena incorrecta");
+                    }
+                    break;
+                case 4:
+                    foreach (var item in valores)
+                    {
+                        if (item != "$")
+                        {
+                            switch (estado)
+                            {
+                                case "q0":
+                                    if (item == "cg")
+                                    {
+                                        estado = estados.q1;
+                                    }
+                                    else if (item == "cd")
+                                    {
+                                        estado = estados.q2;
+                                    }
+                                    break;
+                                case "q1":
+                                    if (item == "gato")
+                                    {
+                                        estado = estados.q1;
+                                    }
+                                    else if (item == "cg")
+                                    {
+                                        estado = estados.q1;
+                                    }
+                                    break;
+                            }
+                        }
+                    }
+                    if (estado == "q1" || estado == "q2")
+                    {
+                        stringBuilder.Append("Cadena correcta");
+                    }
+                    else
+                    {
+                        stringBuilder.Append("Cadena incorrecta");
+                    }
+                    break;
+            }
+            return stringBuilder.ToString();
         }
     }
 }

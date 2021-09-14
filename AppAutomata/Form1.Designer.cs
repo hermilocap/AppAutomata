@@ -44,6 +44,8 @@ namespace AppAutomata
             this.textBoxResultado = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.textBoxCadenaEntrada = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -146,12 +148,12 @@ namespace AppAutomata
             // 
             this.ejercicioPresentacion1ToolStripMenuItem.Name = "ejercicioPresentacion1ToolStripMenuItem";
             this.ejercicioPresentacion1ToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.ejercicioPresentacion1ToolStripMenuItem.Text = "Ejercicio Presentacion 2";
+            this.ejercicioPresentacion1ToolStripMenuItem.Text = "Ejercicio Presentacion 7";
             this.ejercicioPresentacion1ToolStripMenuItem.Click += new System.EventHandler(this.ejercicioPresentacion1ToolStripMenuItem_Click);
             // 
             // textBoxResultado
             // 
-            this.textBoxResultado.Location = new System.Drawing.Point(23, 146);
+            this.textBoxResultado.Location = new System.Drawing.Point(21, 157);
             this.textBoxResultado.Multiline = true;
             this.textBoxResultado.Name = "textBoxResultado";
             this.textBoxResultado.Size = new System.Drawing.Size(757, 144);
@@ -175,11 +177,30 @@ namespace AppAutomata
             this.label5.TabIndex = 13;
             this.label5.Text = "Seleccione una actividad a realizar";
             // 
+            // textBoxCadenaEntrada
+            // 
+            this.textBoxCadenaEntrada.Location = new System.Drawing.Point(415, 129);
+            this.textBoxCadenaEntrada.Name = "textBoxCadenaEntrada";
+            this.textBoxCadenaEntrada.Size = new System.Drawing.Size(171, 20);
+            this.textBoxCadenaEntrada.TabIndex = 14;
+            this.textBoxCadenaEntrada.Text = "cg,gato,cg,gato,gato,cg,gato,gato,gato,cg,cg,gato,cg,cg,cg,gato,cd,$";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(410, 113);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(158, 13);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Escriba una cadena a procesar:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBoxCadenaEntrada);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.textBoxResultado);
@@ -220,6 +241,8 @@ namespace AppAutomata
         private System.Windows.Forms.TextBox textBoxResultado;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBoxCadenaEntrada;
+        private System.Windows.Forms.Label label6;
     }
 }
 

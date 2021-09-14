@@ -48,6 +48,9 @@ namespace AppAutomata
                 case 5:
                     textBoxResultado.Text = procesador.OperacionesEjercicio5(comboBox1.SelectedIndex);
                     break;
+                case 6:
+                    textBoxResultado.Text = procesador.GenerarAutomataFinito(comboBox1.SelectedIndex,textBoxCadenaEntrada.Text);
+                    break;
             } 
         }
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
